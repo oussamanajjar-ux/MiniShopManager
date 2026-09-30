@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Bonjour Oussema !", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
+            val btnCatalogue = findViewById<Button>(R.id.btnCatalogue)
+            btnCatalogue.setOnClickListener {
+                startActivity(Intent(this, CatalogueActivity::class.java))
+            }
         }
 
         Log.d("LIFECYCLE", "onCreate appelé")
